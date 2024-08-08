@@ -1,31 +1,30 @@
 
 <template>
-  <div id="all">
+    <div id="all">
 <header>
-  <hr>
-<h1>Stolen cars for sale</h1>
-<hr>
+    <hr>
+        <h1>Cars for sale</h1>
+    <hr>
 </header>
 <body>
-  <div id="top">
+    <div id="top">
     <hr>
-<router-link to= "/"> Home </router-link>
-|
-<router-link to= "/info"> info </router-link>
-<hr>
-</div>
-<div id="bot">
-<router-view />
-</div>
+        <router-link to= "/"> Home </router-link>
+        |
+        <router-link to= "/info"> info </router-link>
+    <hr>
+    </div>
+    <div id="bot">
+        <router-view />
+    </div>
 </body>
-</div>
+    </div>
 </template>
-
 
 <script>
 
   export default {
-    name: 'App',
+        name: 'App',
 
     data() {
       return {
@@ -35,19 +34,20 @@
         showM: false
     }
   },
-  methods:{
-    toggle(){
-      this.show = !this.show
-    },
-    toggleM(){
-      this.showM = !this.showM
+    methods:{
+      toggle(){
+        this.show = !this.show
+      },
+      toggleM(){
+        this.showM = !this.showM
+      }
     }
-  }
 }
 
 </script>
 
 <style scoped>
+
   header{
     background-color: #d000ff;
 
@@ -75,8 +75,9 @@
   }
   hr {
     color: black;
-    border: none; /* Usuwa domyślną ramkę */
-    height: 2px; /* Ustawia wysokość linii */
-    background-color: black; /* Ustawia kolor tła */
+    border: none; 
+    height: 2px; 
+    background-color: black; 
 }
+
 </style>

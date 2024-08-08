@@ -1,17 +1,49 @@
 <template>
+
     <div class="backdrop" @click.self="closeModal">
         <div class="modal">
-            <h1>SIEMAANO {{ type }}</h1>
+
+            <h1>YOU CHOOSE: {{ type }}</h1>
             
-            <label>Maximum mileage  <input type="range" name="nasycenie" min="0" max="500000" step="500" v-model="range"></label>
+            <label>Maximum mileage:   
+                <input type="range" 
+                       name="nasycenie" 
+                       min="0" 
+                       max="500000" 
+                       step="500" 
+                       v-model="range">
+            </label>
+
             <br>
+
             {{ range + " KM"}}
+            
             <br>    
             
-            <label>Price MIN <input type="number" name="price" min="0" max="100000" step="1000" v-model="priceMin" @input="handlePriceChange"></label>
+            <label>Price MIN:  
+                <input type="number" 
+                       name="price" 
+                       min="0" 
+                       max="100000" 
+                       step="1000" 
+                       v-model="priceMin" 
+                       @input="handlePriceChange">
+            </label>
+
             <br>
-            <label>Price MAX <input type="number" name="price" min="0" max="100000" step="1000" v-model="priceMax" @input="handlePriceChange"></label>
+
+            <label>Price MAX:  
+                <input type="number" 
+                       name="price" 
+                       min="0" 
+                       max="100000" 
+                       step="1000" 
+                       v-model="priceMax"
+                       @input="handlePriceChange">
+                </label>
+
             <br>
+            
             <label>Color: 
                 <select v-model="color">
                     <option value="red">Red</option>
@@ -22,27 +54,27 @@
                 </select>
             </label>
     
-
             <br>
-            AUTA
+
+            <h1>CARS</h1>
+
             <div class="scrollable-container">  
                 <div v-for="car in cars" :key="car.id">
                     <div v-if="isCarInRange(car)" class="oneCar">
                         {{ car.brand }} {{ car.model }} {{ car.price }} {{ car.mileage }} {{ car.color }}
                         <img :src="getCarImagePath(car.id)" alt="Car Image" />
-                         <!-- <img src="\src\assets\1.jpg" alt="ASD"> -->
                     </div>
                 </div>
-                    <div v-if="!hasCarsInRange">
-                        <h1>We don't have such cars</h1>
-                    </div>
+                <div v-if="!hasCarsInRange">
+                    <h1>We don't have such cars</h1>
+                </div>
             </div>
         </div>
     </div>
+
 </template>
 
 <script>
-import path from 'path';
 
     export default {
         props: ['type'],
@@ -53,49 +85,47 @@ import path from 'path';
                 priceMax: '9999999',
                 color: 'black',
                 have: true,
-                path: "C:\Users\dawid\Documents\VUE2\FirstPro\src\assets",
-
+                path: "",
                 cars: []
             }
         },
         computed: {
-    hasCarsInRange() {
-      return this.cars.some(car => this.isCarInRange(car));
-    }
-  },
+            hasCarsInRange() {
+                return this.cars.some(car => this.isCarInRange(car));
+            }
+        },
         methods: {
             closeModal() {
                 this.$emit('close')
             },
             handlePriceChange(event) {
-   
-        if (this.priceMin > this.priceMax) {
-          this.priceMax = this.priceMin;
-        } else if (this.priceMax < this.priceMin) {
-          this.priceMin = this.priceMax;
-        }
-      
-    },
-
-    isCarInRange(car) {
-            const inRange = car.mileage < this.range && car.color == this.color && car.price <= this.priceMax && car.price >= this.priceMin && car.type == this.type;
-            return inRange;
+                if (this.priceMin > this.priceMax) {
+                    this.priceMax = this.priceMin;
+                } else if (this.priceMax < this.priceMin) {
+                    this.priceMin = this.priceMax;
+                }
+            },
+            isCarInRange(car) {
+                const inRange = car.mileage < this.range && car.color == this.color && car.price <= this.priceMax && car.price >= this.priceMin && car.type == this.type;
+                    return inRange;
+            },
+            getCarImagePath(carId) {
+                return `/src/assets/${carId}.jpg`;
+            }
         },
-        getCarImagePath(carId) {
-            return `/src/assets/${carId}.jpg`;
-        }
-    },
-    mounted() {
+        mounted() {
         fetch('http://localhost:3000/car')
             .then(response => response.json())
             .then(json => {
                 this.cars = json
             })
-    }
-}   
+        }
+    }   
+
 </script>
 
 <style scoped>
+
     .backdrop {
         position: fixed;
         top: 0;
@@ -122,9 +152,9 @@ import path from 'path';
         color: white;
     }
     .scrollable-container {
-    max-height: 400px; 
-    overflow-y: auto; 
-}
+        max-height: 400px; 
+        overflow-y: auto; 
+    }
     label {
         color: white;
     }
@@ -144,7 +174,6 @@ import path from 'path';
         height: auto;
         max-width: 80%;
         border: 2px solid black;
-    
     }
     .oneCar{
         background-color: #d000ff;
