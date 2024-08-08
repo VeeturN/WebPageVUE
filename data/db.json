@@ -1,0 +1,203 @@
+{
+    "car": [
+        {
+            "id": 1,
+            "name": "BMW",
+            "model": "X5",
+            "year": 2019,
+            "price": 50000,
+            "color": "black",
+            "img": "",
+            "type": "SUV",
+            "mileage": 30000
+        },
+        {
+            "id": 2,
+            "name": "Audi",
+            "model": "A6",
+            "year": 2020,
+            "price": 55000,
+            "color": "white",
+            "img": "",
+            "type": "SPORT",
+            "mileage": 25000
+        },
+        {
+            "id": 3,
+            "name": "Mercedes-Benz",
+            "model": "C-Class",
+            "year": 2018,
+            "price": 45000,
+            "color": "silver",
+            "img": "",
+            "type": "SMALL",
+            "mileage": 40000
+        },
+        {
+            "id": 4,
+            "name": "Tesla",
+            "model": "Model 3",
+            "year": 2021,
+            "price": 60000,
+            "color": "blue",
+            "img": "",
+            "type": "SPORT",
+            "mileage": 15000
+        },
+        {
+            "id": 5,
+            "name": "Toyota",
+            "model": "Camry",
+            "year": 2017,
+            "price": 30000,
+            "color": "gray",
+            "img": "",
+            "type": "SMALL",
+            "mileage": 50000
+        },
+        {
+            "id": 6,
+            "name": "Honda",
+            "model": "Civic",
+            "year": 2019,
+            "price": 25000,
+            "color": "red",
+            "img": "",
+            "type": "SMALL",
+            "mileage": 35000
+        },
+        {
+            "id": 7,
+            "name": "Ford",
+            "model": "Mustang",
+            "year": 2022,
+            "price": 70000,
+            "color": "yellow",
+            "img": "",
+            "type": "SPORT",
+            "mileage": 5000
+        },
+        {
+            "id": 8,
+            "name": "Chevrolet",
+            "model": "Tahoe",
+            "year": 2020,
+            "price": 65000,
+            "color": "black",
+            "img": "",
+            "type": "SUV",
+            "mileage": 20000
+        },
+        {
+            "id": 9,
+            "name": "Volkswagen",
+            "model": "Golf",
+            "year": 2018,
+            "price": 28000,
+            "color": "white",
+            "img": "",
+            "type": "SMALL",
+            "mileage": 42000
+        },
+        {
+            "id": 10,
+            "name": "Nissan",
+            "model": "Altima",
+            "year": 2017,
+            "price": 27000,
+            "color": "blue",
+            "img": "",
+            "type": "SMALL",
+            "mileage": 48000
+        },
+        {
+            "id": 11,
+            "name": "Hyundai",
+            "model": "Sonata",
+            "year": 2019,
+            "price": 26000,
+            "color": "silver",
+            "img": "",
+            "type": "SMALL",
+            "mileage": 30000
+        },
+        {
+            "id": 12,
+            "name": "Kia",
+            "model": "Sorento",
+            "year": 2020,
+            "price": 32000,
+            "color": "black",
+            "img": "",
+            "type": "SUV",
+            "mileage": 22000
+        },
+        {
+            "id": 13,
+            "name": "Subaru",
+            "model": "Outback",
+            "year": 2021,
+            "price": 35000,
+            "color": "green",
+            "img": "",
+            "type": "OFFROAD",
+            "mileage": 12000
+        },
+        {
+            "id": 14,
+            "name": "Mazda",
+            "model": "CX-5",
+            "year": 2018,
+            "price": 29000,
+            "color": "red",
+            "img": "",
+            "type": "SUV",
+            "mileage": 40000
+        },
+        {
+            "id": 15,
+            "name": "Jeep",
+            "model": "Grand Cherokee",
+            "year": 2022,
+            "price": 68000,
+            "color": "gray",
+            "img": "",
+            "type": "OFFROAD",
+            "mileage": 8000
+        },
+        {
+            "id": 16,
+            "name": "Lexus",
+            "model": "RX",
+            "year": 2019,
+            "price": 52000,
+            "color": "white",
+            "img": "",
+            "type": "SUV",
+            "mileage": 27000
+        },
+        {
+            "id": 17,
+            "name": "BMW",
+            "model": "I8",
+            "year": 2016,
+            "price": 70000,
+            "color": "black",
+            "img": "",
+            "type": "SPORT",
+            "mileage": 99999
+        },
+        {
+            "id": 18,
+            "name": "Toyota",
+            "model": "Hilux",
+            "year": 2021,
+            "price": 80000,
+            "color": "white",
+            "img": "",
+            "type": "PICKUP",
+            "mileage": 20000
+        }
+        
+    ]
+}
