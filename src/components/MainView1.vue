@@ -85,6 +85,7 @@
     }
     .cards:nth-child(even) {
         background-color:white;
+        color: black;
     }
     .cards:nth-child(odd) {
         background-color: #d000ff;
