@@ -1,11 +1,8 @@
 <template>
-
-    <header>
+<div id="all">
         <h1>CHOOSE TYPE</h1>
-    </header>
-
-    <body>
-
+        <button @click="handleColorChange">Change color :)</button>
+    
         <div class="card-container">
             <button class="cards" @click="toggleModal('SUV')">SUV</button>
             <button class="cards" @click="toggleModal('PICKUP')">PICKUP</button>
@@ -16,8 +13,7 @@
         <div v-if="showModal">
             <MainModal @close="toggleModal" :type="typeC" />
         </div>
-    </body>
-
+    </div>
 </template>
 
 <script>
@@ -37,30 +33,37 @@
             toggleModal(type) {
                 this.showModal = !this.showModal
                 this.typeC = type
-            }
+            },
+            handleColorChange() {
+                const cards = document.querySelectorAll('.cards');
+    
+        if (cards[0].style.backgroundColor !== "gray") {
+            cards.forEach(card => {
+            card.style.backgroundColor = "gray";
+            });
+        } else {
+            cards.forEach(card => {
+            card.style.backgroundColor = "";
+            });
+    }
+
+            },
         }
     }
 
 </script>
 
-<style>
-
-    header {
-        background-color: #d000ff;
-        padding: 1rem;
-        text-align: center;
-        font-family: cursive;
-    }
-    body {
-        background-color: #d000ff;
-        display: block;
-        text-align: center;
-        width: 100%;
-        font-family: cursive;
+<style scoped>
+    #all {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: top;
     }
     .card-container {
         width: 80%;
-        height: 300px;
+        min-height: 300px;
         display: flex;
         margin: 0 auto;
         margin-top: 50px;
@@ -101,6 +104,12 @@
         cursor: pointer;
         color: black;
         font-family: cursive;
+        font-size: 20px;
+        background-color: white;
+        border-radius: 50px;
+        padding: 10px;
+        margin: 10px;
+        transition: .5s all;
     }
     h1 {
         color: white;

@@ -82,7 +82,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     #all {
         max-height: 80%;
         text-align: center;
