@@ -9,6 +9,8 @@
 <body>
     <div id="top">
     <hr>
+        <router-link to= "/employee"> Employee </router-link>
+        |
         <router-link to= "/"> Home </router-link>
         |
         <router-link to= "/info"> info </router-link>
